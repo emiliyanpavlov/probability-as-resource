@@ -2,8 +2,14 @@
 
 public interface IProbabilityDispatcher
 {
-    public ulong GetJointProbabilityFingerPrint(
-        INumericInput input,
-        int labelIndex,
+    public IJointProbability GetJointProbabilityFingerprint(
+        INumericInput input
     );
+
+    public IProbability GetConditionalProbability(
+        INumericInput input,
+        int targetIndex);
+
+    public IJointProbability GetProbability(
+        INumericInput input);
 }
